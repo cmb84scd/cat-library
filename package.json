@@ -7,9 +7,11 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "lint": "eslint --ext '.ts' .",
-    "lint:fix": "eslint --ext '.ts' . --fix",
-    "test": "jest"
+    "local": "ts-node src/index.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "jest",
+    "types": "tsc --noEmit"
   },
   "dependencies": {
     "@types/node": "^18.11.18",
