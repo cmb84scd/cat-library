@@ -1,8 +1,5 @@
-class Greeting {
-  sayHello(): string {
-    return "Hello World!"
-  }
-}
+import { MusicLibrary } from "./musicLibrary"
 
-const greeting = new Greeting()
-export default greeting
+const musicLibrary = new MusicLibrary()
+musicLibrary.add('Country', 'Top band', 'Best dances', 12, 60)
+console.log(musicLibrary.items)
