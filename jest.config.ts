@@ -3,7 +3,7 @@ export default {
   collectCoverage: true,
   collectCoverageFrom: ["**/*.{ts,tsx}"],
   coverageDirectory: "coverage",
-  coveragePathIgnorePatterns: ["/node_modules/", "./*.config.*"],
+  coveragePathIgnorePatterns: ["/node_modules/", "./*.config.*", "./src/utils/interfaces.ts", "./src/index.ts"],
   coverageProvider: "v8",
   coverageThreshold: {
     "global": {
