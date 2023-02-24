@@ -1,13 +1,13 @@
 export interface Genre {
-    genre: string
+  genre: string
 }
 
 export interface Band extends Genre {
-    artist: string
+  artist: string
 }
 
 export interface Recording extends Band {
-    title: string
-    tracks: number
-    length: number
+  title: string
+  tracks: number
+  length: number
 }
