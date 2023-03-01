@@ -6,10 +6,12 @@
   "author": "Cat",
   "license": "MIT",
   "scripts": {
+    "bootstrap": "yarn && yarn prepare",
     "build": "tsc",
     "local": "ts-node src/index.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "prepare": "husky install",
     "test": "jest",
     "types": "tsc --noEmit --pretty"
   },
@@ -29,6 +31,7 @@
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
     "jest": "^29.4.1",
     "prettier": "^2.8.4"
   }
