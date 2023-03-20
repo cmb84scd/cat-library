@@ -32,4 +32,13 @@ export class MusicLibrary {
       length: length,
     })
   }
+
+  list_titles() {
+    const titles: string[] = []
+    this.items.forEach((item) => {
+      titles.push(item.title)
+    })
+
+    return titles
+  }
 }
