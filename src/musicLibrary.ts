@@ -34,7 +34,7 @@ export class MusicLibrary {
     })
   }
 
-  list_by_titles() {
+  listByTitles() {
     const titles: string[] = []
     this.items.forEach((item) => {
       titles.push(item.title)
@@ -43,7 +43,7 @@ export class MusicLibrary {
     return titles
   }
 
-  list_by_artist(artist: string) {
+  listByArtist(artist: string) {
     const titlesByArtist: string[] = []
     this.items.forEach((item) => {
       if (item.artist === artist) {
