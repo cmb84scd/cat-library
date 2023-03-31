@@ -33,12 +33,25 @@ export class MusicLibrary {
     })
   }
 
-  list_titles() {
+  list_by_titles() {
     const titles: string[] = []
     this.items.forEach((item) => {
       titles.push(item.title)
     })
 
     return titles
+  }
+
+  list_by_artist(artist: string) {
+    const titlesByArtist: string[] = []
+    this.items.forEach((item) => {
+      if (item.artist === artist) {
+        titlesByArtist.push(item.title)
+      }
+    })
+    console.log(titlesByArtist)
+    return `For artist ${artist} you have the following albums in your library:\n  * ${titlesByArtist.join(
+      '\n  * '
+    )}`
   }
 }
