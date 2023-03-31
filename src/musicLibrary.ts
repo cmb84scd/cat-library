@@ -44,22 +44,22 @@ export class MusicLibrary {
   }
 
   listByArtist(artist: string) {
-    const titlesByArtist: string[] = []
-    this.items.forEach((item) => {
-      if (item.artist === artist) {
-        titlesByArtist.push(item.title)
-      }
-    })
+    const titlesByArtist: string[] = this.getTitleByInfo(artist)
     return printInfo('artist', artist, titlesByArtist)
   }
 
   listByGenre(genre: string) {
-    const titlesByGenre: string[] = []
+    const titlesByGenre: string[] = this.getTitleByInfo(genre)
+    return printInfo('genre', genre, titlesByGenre)
+  }
+
+  private getTitleByInfo(info: string) {
+    const titlesByInfo: string[] = []
     this.items.forEach((item) => {
-      if (item.genre === genre) {
-        titlesByGenre.push(item.title)
+      if (item.artist === info || item.genre === info) {
+        titlesByInfo.push(item.title)
       }
     })
-    return printInfo('genre', genre, titlesByGenre)
+    return titlesByInfo
   }
 }
