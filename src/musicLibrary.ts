@@ -50,7 +50,16 @@ export class MusicLibrary {
         titlesByArtist.push(item.title)
       }
     })
-    console.log(titlesByArtist)
     return printInfo('artist', artist, titlesByArtist)
+  }
+
+  listByGenre(genre: string) {
+    const titlesByGenre: string[] = []
+    this.items.forEach((item) => {
+      if (item.genre === genre) {
+        titlesByGenre.push(item.title)
+      }
+    })
+    return printInfo('genre', genre, titlesByGenre)
   }
 }

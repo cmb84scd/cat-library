@@ -42,4 +42,14 @@ describe('Music Library class', () => {
       'For artist Top band you have the following albums in your library:\n  * Top country hits\n  * Classic country'
     )
   })
+
+  it('returns all the titles of an artist in the library', () => {
+    musicLibrary.add('Country', 'Top band', 'Top country hits', 12, 60)
+    musicLibrary.add('Country', 'Top band', 'Classic country', 12, 60)
+    musicLibrary.add('Dance', 'Dance band', 'Best dances', 12, 60)
+    musicLibrary.add('Jazz', 'JazziB', 'Top jazz hits', 12, 60)
+    expect(musicLibrary.listByGenre('Country')).toEqual(
+      'For genre Country you have the following albums in your library:\n  * Top country hits\n  * Classic country'
+    )
+  })
 })
