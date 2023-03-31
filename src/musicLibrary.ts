@@ -1,4 +1,5 @@
 import { Recording } from './utils/interfaces'
+import { printInfo } from './utils/printInfo'
 
 export class MusicLibrary {
   public items: Array<Recording>
@@ -50,8 +51,6 @@ export class MusicLibrary {
       }
     })
     console.log(titlesByArtist)
-    return `For artist ${artist} you have the following albums in your library:\n  * ${titlesByArtist.join(
-      '\n  * '
-    )}`
+    return printInfo('artist', artist, titlesByArtist)
   }
 }
