@@ -1,14 +1,22 @@
+.yarn_job:
+  before_script:
+    - npm install -g yarn
+    - yarn bootstrap
+
 stages:
   - test
 
 test:
   stage: test
+  extends: .yarn_job
   script: yarn test
 
 lint:
   stage: test
+  extends: .yarn_job
   script: yarn lint
 
 types:
   stage: test
+  extends: .yarn_job
   script: yarn types
