@@ -1,0 +1,14 @@
+stages:
+  - test
+
+test:
+  stage: test
+  script: yarn test
+
+lint:
+  stage: test
+  script: yarn lint
+
+types:
+  stage: test
+  script: yarn types
