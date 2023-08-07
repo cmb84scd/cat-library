@@ -1,5 +1,5 @@
 import { Recording } from './utils/interfaces'
-import { printInfo } from './utils/printInfo'
+import { printInfo } from '@cat/shared-utils'
 
 export class MusicLibrary {
   public items: Array<Recording>
@@ -45,12 +45,12 @@ export class MusicLibrary {
 
   listByArtist(artist: string) {
     const titlesByArtist: string[] = this.getTitleByInfo(artist)
-    return printInfo('artist', artist, titlesByArtist)
+    return printInfo('artist', artist, 'albums', titlesByArtist)
   }
 
   listByGenre(genre: string) {
     const titlesByGenre: string[] = this.getTitleByInfo(genre)
-    return printInfo('genre', genre, titlesByGenre)
+    return printInfo('genre', genre, 'albums', titlesByGenre)
   }
 
   private getTitleByInfo(info: string) {

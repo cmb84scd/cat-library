@@ -1,39 +1,30 @@
 {
-  "name": "music-library",
+  "name": "cat-library",
   "version": "1.0.0",
-  "description": "place to store music",
-  "main": "index.ts",
+  "description": "place to store anything you find in a library",
+  "main": "dist/index.js",
   "author": "Cat",
-  "license": "MIT",
+  "license": "UNLICENSED",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "bootstrap": "yarn && yarn prepare",
-    "build": "tsc",
-    "local": "ts-node src/index.ts",
+    "build": "lerna run build",
     "lint": "eslint .",
     "format": "eslint . --fix",
     "prepare": "husky install",
-    "test": "jest",
-    "types": "tsc --noEmit --pretty"
-  },
-  "dependencies": {
-    "@types/node": "^20.3.1",
-    "ts-node": "^10.9.1",
-    "typescript": "5.0.4"
+    "test": "lerna run test",
+    "types": "lerna run types"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.5",
-    "@babel/preset-env": "^7.22.5",
-    "@babel/preset-typescript": "^7.22.5",
-    "@types/jest": "^29.5.2",
     "@typescript-eslint/eslint-plugin": "^5.59.11",
     "@typescript-eslint/parser": "^5.59.11",
-    "babel-jest": "^29.5.0",
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
-    "jest": "^29.5.0",
-    "lage": "^2.7.2",
+    "lerna": "^7.0.2",
     "prettier": "^2.8.8"
   }
 }
