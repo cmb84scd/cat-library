@@ -1,5 +1,5 @@
 {
-  "name": "@cat/music-library",
+  "name": "@cat/music",
   "version": "1.0.0",
   "description": "place to store music",
   "main": "src/index.ts",
@@ -11,12 +11,13 @@
     "types": "tsc --noEmit --pretty"
   },
   "dependencies": {
-    "@cat/shared-utils": "^1.0.0"
+    "@cat/utils": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-typescript": "^7.22.5",
+    "@cat/types": "^1.0.0",
     "@types/jest": "^29.5.2",
     "@types/node": "^20.3.1",
     "babel-jest": "^29.5.0",

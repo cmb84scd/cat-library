@@ -1,6 +1,4 @@
-export interface Genre {
-  genre: string
-}
+import { Genre } from '@cat/types'
 
 export interface Band extends Genre {
   artist: string

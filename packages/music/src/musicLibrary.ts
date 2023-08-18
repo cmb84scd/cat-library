@@ -1,5 +1,5 @@
 import { Recording } from './utils/interfaces'
-import { printInfo } from '@cat/shared-utils'
+import { printInfo } from '@cat/utils'
 
 export class MusicLibrary {
   public items: Array<Recording>

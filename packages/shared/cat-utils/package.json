@@ -1,5 +1,5 @@
 {
-  "name": "@cat/shared-utils",
+  "name": "@cat/utils",
   "version": "1.0.0",
   "description": "place for shared components",
   "main": "src/index.ts",

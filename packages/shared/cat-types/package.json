@@ -1,0 +1,8 @@
+{
+  "name": "@cat/types",
+  "version": "1.0.0",
+  "description": "place for shared types/interfaces",
+  "types": "index",
+  "author": "Cat",
+  "license": "UNLICENSED"
+}
