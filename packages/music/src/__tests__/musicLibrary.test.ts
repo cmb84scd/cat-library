@@ -38,13 +38,13 @@ describe('Music Library class', () => {
 
     it('returns all the titles of an artist in the library', () => {
       expect(musicLibrary1.listByArtist('Top band')).toEqual(
-        'For artist Top band you have the following albums in your library:\n  * Top country hits\n  * Classic country'
+        'For artist Top band you have the following albums in your library:\n  * Top country hits\n  * Classic country',
       )
     })
 
     it('returns all the titles of an artist in the library', () => {
       expect(musicLibrary1.listByGenre('Country')).toEqual(
-        'For genre Country you have the following albums in your library:\n  * Top country hits\n  * Classic country'
+        'For genre Country you have the following albums in your library:\n  * Top country hits\n  * Classic country',
       )
     })
   })

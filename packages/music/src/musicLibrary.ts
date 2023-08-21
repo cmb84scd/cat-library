@@ -23,7 +23,7 @@ export class MusicLibrary {
     artist: string,
     title: string,
     tracks: number,
-    length: number
+    length: number,
   ): void {
     this.items.push({
       genre: genre,
