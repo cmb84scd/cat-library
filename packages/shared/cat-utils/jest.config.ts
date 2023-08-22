@@ -27,5 +27,6 @@ export default {
     'json',
     'node',
   ],
+  preset: 'ts-jest',
   verbose: true,
 }
