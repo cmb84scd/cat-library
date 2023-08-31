@@ -1,4 +1,4 @@
-import { MusicLibrary } from '../musicLibrary'
+import { MusicLibrary } from '../music_library'
 
 describe('Music Library class', () => {
   const musicLibrary = new MusicLibrary()
