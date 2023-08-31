@@ -27,5 +27,6 @@
     "husky": "^8.0.3",
     "lerna": "^7.1.5",
     "prettier": "^3.0.2"
-  }
+  },
+  "packageManager": "yarn@3.6.3"
 }
