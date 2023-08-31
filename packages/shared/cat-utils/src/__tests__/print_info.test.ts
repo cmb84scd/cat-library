@@ -1,4 +1,4 @@
-import { printInfo } from '../printInfo'
+import { printInfo } from '../print_info'
 
 describe('Print info function', () => {
   it('returns a string with a list of particular items', () => {

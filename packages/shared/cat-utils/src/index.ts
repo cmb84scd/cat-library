@@ -1,1 +1,1 @@
-export * from './printInfo'
+export * from './print_info'

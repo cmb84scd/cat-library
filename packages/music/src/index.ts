@@ -1,4 +1,4 @@
-import { MusicLibrary } from './musicLibrary'
+import { MusicLibrary } from './music_library'
 
 const musicLibrary = new MusicLibrary()
 musicLibrary.add('Country', 'Top band', 'Top country hits', 12, 60)
