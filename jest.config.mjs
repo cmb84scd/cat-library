@@ -1,13 +1,9 @@
-export default {
+/** @type {import('ts-jest').JestConfigWithTsJest} */
+const config = {
   clearMocks: true,
   collectCoverage: true,
   collectCoverageFrom: ['**/*.{ts,tsx}'],
   coverageDirectory: 'coverage',
-  coveragePathIgnorePatterns: [
-    '/node_modules/',
-    './*.config.*',
-    './src/index.ts',
-  ],
   coverageProvider: 'v8',
   coverageThreshold: {
     global: {
@@ -17,16 +13,8 @@ export default {
       statements: -5,
     },
   },
-  moduleFileExtensions: [
-    'ts',
-    'tsx',
-    'js',
-    'mjs',
-    'cjs',
-    'jsx',
-    'json',
-    'node',
-  ],
   preset: 'ts-jest',
-  verbose: true,
+  reporters: ["default", "jest-junit"],
 }
+
+export default config

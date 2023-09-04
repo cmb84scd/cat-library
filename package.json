@@ -15,7 +15,7 @@
     "lint": "eslint .",
     "format": "eslint . --fix",
     "prepare": "husky install",
-    "test": "lerna run test",
+    "test": "lerna run test --stream",
     "types": "lerna run types"
   },
   "devDependencies": {
