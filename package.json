@@ -14,7 +14,7 @@
     "build": "lerna run build",
     "lint": "eslint .",
     "format": "eslint . --fix",
-    "prepare": "husky install",
+    "postinstall": "npx is-ci || husky install",
     "test": "lerna run test --stream",
     "types": "lerna run types"
   },
