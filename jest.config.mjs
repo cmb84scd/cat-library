@@ -3,8 +3,9 @@ const config = {
   clearMocks: true,
   collectCoverage: true,
   collectCoverageFrom: ['**/*.{ts,tsx}'],
-  coverageDirectory: 'coverage',
+  coverageDirectory: '<rootDir>/coverage/',
   coverageProvider: 'v8',
+  coverageReporters: ['text', 'cobertura', 'html'],
   coverageThreshold: {
     global: {
       branches: 95,

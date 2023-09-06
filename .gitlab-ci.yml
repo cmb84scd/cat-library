@@ -9,7 +9,20 @@ stages:
 test:
   stage: test
   extends: .yarn_job
-  script: yarn test
+  coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
+  script: yarn workspace ${PACKAGE} jest --ci
+  parallel:
+    matrix:
+      - PACKAGE:
+          - "@cat/music"
+          - "@cat/utils"
+  artifacts:
+    expire_in: "7 days"
+    reports:
+      junit: "**/junit.xml"
+      coverage_report:
+        coverage_format: cobertura
+        path: "**/coverage/cobertura-coverage.xml"
 
 lint:
   stage: test
