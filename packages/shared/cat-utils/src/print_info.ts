@@ -1,11 +1,11 @@
-/** The genre or artist. */
-type Who = 'genre' | 'artist'
+/** The genre, artist or author. */
+type Who = 'genre' | 'artist' | 'author'
 /** The type of item eg albums. */
-type Item = 'albums'
+type Item = 'albums' | 'books'
 
 /**
  * Accepts several arguments and returns a string containing a list of items
- * @param who The genre or artist. Type {@link Who}
+ * @param who The genre, artist or author. Type {@link Who}
  * @param name The name of the artist/band
  * @param item The type of item eg albums. Type {@link Item}
  * @param arr Array of items in the library
