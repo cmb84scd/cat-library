@@ -14,6 +14,7 @@ test:
   parallel:
     matrix:
       - PACKAGE:
+          - "@cat/books"
           - "@cat/music"
           - "@cat/utils"
   artifacts:
