@@ -2,7 +2,7 @@
   "name": "cat-library",
   "version": "1.0.0",
   "description": "place to store anything you find in a library",
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "author": "Cat",
   "license": "UNLICENSED",
   "private": true,
