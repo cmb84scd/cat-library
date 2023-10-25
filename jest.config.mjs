@@ -15,7 +15,15 @@ const config = {
     },
   },
   preset: 'ts-jest',
-  reporters: ["default", "jest-junit"],
+  reporters: ['default', 'jest-junit'],
+  rootDir: process.cwd(),
+  testPathIgnorePatterns: ['/node_modules/', '/__factories__/'],
+  transform: {
+    '^.+\\.tsx?$': [
+      'ts-jest',
+      { tsconfig: '<rootDir>/tsconfig.json', isolatedModules: true },
+    ],
+  },
 }
 
 export default config

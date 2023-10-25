@@ -10,7 +10,7 @@ test:
   stage: test
   extends: .yarn_job
   coverage: /All files[^|]*\|[^|]*\s+([\d\.]+)/
-  script: yarn workspace ${PACKAGE} jest --ci
+  script: yarn workspace ${PACKAGE} jest --ci --colors
   parallel:
     matrix:
       - PACKAGE:
