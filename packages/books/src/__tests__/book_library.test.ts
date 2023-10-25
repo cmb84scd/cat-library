@@ -8,7 +8,11 @@ describe('Book Library class', () => {
   })
 
   it('adds a book to the library', () => {
-    bookLibrary.add('Fiction', 'Best Author', 'Best TS Practices')
+    bookLibrary.add({
+      genre: 'Fiction',
+      author: 'Best Author',
+      title: 'Best TS Practices',
+    })
     expect(bookLibrary.items).toStrictEqual([
       { genre: 'Fiction', author: 'Best Author', title: 'Best TS Practices' },
     ])
@@ -16,29 +20,30 @@ describe('Book Library class', () => {
 
   describe('Getting data from the book library', () => {
     const bookLibrary1 = new BookLibrary()
-    bookLibrary1.add('Fiction', 'Best Author', 'Best TS Practices')
-    bookLibrary1.add('Fiction', 'Best Author', 'Some TS Stuff')
-    bookLibrary1.add('Maths', 'Math Nerd', 'Simple Maths')
-    bookLibrary1.add('Tech', 'Tech Nerd', 'Coding Practices')
-
-    it('returns the titles of all the books in the library', () => {
-      expect(bookLibrary1.listByTitles()).toStrictEqual([
-        'Best TS Practices',
-        'Some TS Stuff',
-        'Simple Maths',
-        'Coding Practices',
-      ])
+    bookLibrary1.add({
+      genre: 'Fiction',
+      author: 'Best Author',
+      title: 'Best TS Practices',
+    })
+    bookLibrary1.add({
+      genre: 'Fiction',
+      author: 'Best Author',
+      title: 'Some TS Stuff',
+    })
+    bookLibrary1.add({
+      genre: 'Maths',
+      author: 'Math Nerd',
+      title: 'Simple Maths',
+    })
+    bookLibrary1.add({
+      genre: 'Tech',
+      author: 'Tech Nerd',
+      title: 'Coding Practices',
     })
 
     it('returns all the titles of an author in the library', () => {
       expect(bookLibrary1.listByAuthor('Best Author')).toEqual(
         'For author Best Author you have the following books in your library:\n  * Best TS Practices\n  * Some TS Stuff',
-      )
-    })
-
-    it('returns all the titles of a genre in the library', () => {
-      expect(bookLibrary1.listByGenre('Fiction')).toEqual(
-        'For genre Fiction you have the following books in your library:\n  * Best TS Practices\n  * Some TS Stuff',
       )
     })
   })

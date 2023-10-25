@@ -1,7 +1,7 @@
 /** The genre, artist or author. */
 type Who = 'genre' | 'artist' | 'author'
 /** The type of item eg albums. */
-type Item = 'albums' | 'books'
+export type Item = 'albums' | 'books'
 
 /**
  * Accepts several arguments and returns a string containing a list of items
