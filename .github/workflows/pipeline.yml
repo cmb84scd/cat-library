@@ -15,13 +15,14 @@ jobs:
       with:
         node-version: '20'
     - run: yarn
-    # - name: Get yarn cache dir path
-    #   id: yarn-cache-dir-path
-    #   run: echo "dir=$(.yarn/cache)" >> $GITHUB_OUTPUT
+    - name: Get yarn cache dir path
+      id: yarn-cache-dir-path
+      run: echo "dir=$(.yarn/cache)" >> $GITHUB_OUTPUT
+      run: pwd
     - uses: actions/cache@v4
       id: yarn-cache
       with:
-        path: .yarn/cache
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
         key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
         restore-keys: |
           ${{ runner.os }}-yarn-
