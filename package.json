@@ -14,7 +14,7 @@
     "build": "lerna run build",
     "lint": "eslint --ext .ts,.js .",
     "format": "yarn run lint --fix",
-    "postinstall": "npx is-ci || husky install",
+    "postinstall": "husky",
     "test": "lerna run test --stream",
     "types": "lerna run types"
   },
