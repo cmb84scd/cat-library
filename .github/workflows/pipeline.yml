@@ -7,7 +7,7 @@ on: [push]
   #   branches: [ "main" ]
 
 jobs:
-  test:
+  install:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -16,9 +16,20 @@ jobs:
         node-version: '20'
         cache: 'yarn'
     - run: yarn
+
+  test:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'yarn'
     - run: yarn test
 
   lint:
+    needs: install
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -26,10 +37,10 @@ jobs:
       with:
         node-version: '20'
         cache: 'yarn'
-    - run: yarn
     - run: yarn lint
 
   types:
+    needs: install
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -37,5 +48,4 @@ jobs:
       with:
         node-version: '20'
         cache: 'yarn'
-    - run: yarn
     - run: yarn types
