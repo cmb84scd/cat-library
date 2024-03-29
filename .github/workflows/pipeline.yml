@@ -1,10 +1,10 @@
 name: Pipeline CI
 
-on: [push]
-  # push:
-  #   branches: [ "main" ]
-  # pull_request:
-  #   branches: [ "main" ]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   test:
@@ -25,6 +25,7 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: '20'
+        cache: 'yarn'
     - run: yarn
     - run: yarn lint
 
@@ -35,5 +36,6 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: '20'
+        cache: 'yarn'
     - run: yarn
     - run: yarn types
