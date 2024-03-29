@@ -18,7 +18,8 @@ jobs:
     - name: Get yarn cache dir path
       id: yarn-cache-dir-path
       # run: echo "dir=$(.yarn/cache)" >> $GITHUB_OUTPUT
-      run: ls -a
+      # run: pwd (/home/runner/work/cat-library/cat-library)
+      run: ls -a .yarn
     - uses: actions/cache@v4
       id: yarn-cache
       with:
