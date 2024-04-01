@@ -15,6 +15,8 @@ jobs:
       with:
         node-version: '20'
         cache: 'yarn'
+    - run: yarn
+    - run: yarn build
     - uses: actions/upload-artifact@v4
       with:
         name: install-files
@@ -22,8 +24,6 @@ jobs:
           .yarn/*
           .pnp.*
         retention-days: 2
-    - run: yarn
-    - run: yarn build
 
   test:
     needs: build
