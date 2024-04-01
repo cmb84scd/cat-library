@@ -17,7 +17,7 @@ const config = {
   preset: 'ts-jest',
   reporters: ['default', 'jest-junit'],
   rootDir: process.cwd(),
-  testPathIgnorePatterns: ['/node_modules/', '/__factories__/'],
+  testPathIgnorePatterns: ['/__factories__/'],
   transform: {
     '^.+\\.tsx?$': [
       'ts-jest',

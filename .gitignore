@@ -1,6 +1,6 @@
 build/
 coverage/
-node_modules/
+.nx/cache
 lerna-debug.log
 .pnp.*
 .yarn/*
@@ -10,5 +10,3 @@ lerna-debug.log
 !.yarn/sdks
 !.yarn/versions
 junit.xml
-
-.nx/cache
