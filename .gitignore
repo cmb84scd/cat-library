@@ -10,3 +10,5 @@ lerna-debug.log
 !.yarn/sdks
 !.yarn/versions
 junit.xml
+
+.nx/cache
