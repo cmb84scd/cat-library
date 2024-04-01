@@ -1,0 +1,28 @@
+{
+  "targetDefaults": {
+    "build": {
+      "cache": true,
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "{projectRoot}/<rootDir>/build"
+      ]
+    },
+    "test": {
+      "cache": true,
+      "dependsOn": [
+        "^test"
+      ],
+      "outputs": [
+        "{projectRoot}/<rootDir>/coverage"
+      ]
+    },
+    "types": {
+      "cache": true,
+      "dependsOn": [
+        "^types"
+      ]
+    }
+  }
+}

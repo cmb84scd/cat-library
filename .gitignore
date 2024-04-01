@@ -1,6 +1,6 @@
 build/
 coverage/
-node_modules/
+.nx/cache
 lerna-debug.log
 .pnp.*
 .yarn/*
