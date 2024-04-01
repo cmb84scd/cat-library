@@ -1,7 +1,11 @@
 name: 'Node set up'
 
-runs:
-  using: 'composite'
+on:
+  workflow_call:
+
+jobs:
+  set-up-node:
+  runs-on: ubuntu-latest
   steps:
   - uses: actions/checkout@v4
   - uses: actions/setup-node@v4
