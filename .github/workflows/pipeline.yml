@@ -10,7 +10,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: ./.github/action.yml
+    - uses: ./.github/workflows/set-up-node.yml
     - run: yarn test
 
   lint:
