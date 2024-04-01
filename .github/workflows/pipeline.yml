@@ -8,10 +8,8 @@ on: ["push"]
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    uses: ./.github/workflows/set-up-node.yml
     steps:
-    - uses: actions/checkout@v4
-    - uses: ./.github/workflows/set-up-node.yml
     - run: yarn test
 
   lint:
