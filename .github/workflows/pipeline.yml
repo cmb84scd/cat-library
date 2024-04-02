@@ -9,7 +9,8 @@ on: ["push"]
 jobs:
   test:
     uses: ./.github/workflows/set-up-node.yml
-    run: yarn test
+    with:
+      task: test
 
   lint:
     runs-on: ubuntu-latest

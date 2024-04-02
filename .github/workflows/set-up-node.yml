@@ -2,6 +2,10 @@ name: 'Node set up'
 
 on:
   workflow_call:
+    inputs:
+      task:
+        required: true
+        type: string
 
 jobs:
   set-up-node:
@@ -13,3 +17,4 @@ jobs:
         node-version: '20'
         cache: 'yarn'
     - run: yarn
+    - run: yarn ${{ inputs.task }}
