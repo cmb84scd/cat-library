@@ -16,5 +16,6 @@ jobs:
       with:
         node-version: '20'
         cache: 'yarn'
-    - run: yarn
+    - name: Install dependencies
+      run: yarn
     - run: yarn ${{ inputs.task }}

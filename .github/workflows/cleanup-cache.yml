@@ -1,9 +1,9 @@
 name: cleanup caches by branch
 
-on: ["push"]
-  # pull_request:
-  #   types:
-  #     - closed
+on:
+  pull_request:
+    types:
+      - closed
 
 jobs:
   cleanup:
@@ -27,4 +27,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
-          BRANCH: refs/pull/4/merge
+          BRANCH: refs/pull/${{ github.event.pull_request.number }}/merge
