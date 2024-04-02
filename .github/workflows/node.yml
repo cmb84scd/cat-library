@@ -1,4 +1,4 @@
-name: 'Node set up'
+name: 'Node'
 
 on:
   workflow_call:
@@ -8,7 +8,7 @@ on:
         type: string
 
 jobs:
-  set-up-node:
+  node:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
