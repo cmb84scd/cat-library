@@ -35,5 +35,8 @@
     "ts-node": "10.9.2",
     "typescript": "5.4.3"
   },
+  "peerDependencies": {
+    "jest": "29.7.0"
+  },
   "packageManager": "yarn@4.1.1"
 }

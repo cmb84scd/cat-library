@@ -2530,6 +2530,8 @@ __metadata:
     ts-jest: "npm:29.1.2"
     ts-node: "npm:10.9.2"
     typescript: "npm:5.4.3"
+  peerDependencies:
+    jest: 29.7.0
   languageName: unknown
   linkType: soft
 

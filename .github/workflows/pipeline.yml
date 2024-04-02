@@ -8,34 +8,16 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'yarn'
-    - run: yarn
-    - run: yarn test
+    uses: ./.github/workflows/node.yml
+    with:
+      task: test
 
   lint:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'yarn'
-    - run: yarn
-    - run: yarn lint
+    uses: ./.github/workflows/node.yml
+    with:
+      task: lint
 
   types:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'yarn'
-    - run: yarn
-    - run: yarn types
+    uses: ./.github/workflows/node.yml
+    with:
+      task: types
